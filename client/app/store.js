@@ -15,6 +15,7 @@ export const history = createBrowserHistory({
   basename: '/',
   hashType: 'noslash'
 });
+store.replaceReducer(nextRootReducer(history));
 
 const middlewares = [thunk, routerMiddleware(history)];
 
@@ -23,8 +24,8 @@ const enhancers = [applyMiddleware(...middlewares)];
 // If Redux DevTools Extension is installed use it, otherwise use Redux compose
 const composeEnhancers =
   process.env.NODE_ENV !== 'production' &&
-  typeof window === 'object' &&
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    typeof window === 'object' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
 

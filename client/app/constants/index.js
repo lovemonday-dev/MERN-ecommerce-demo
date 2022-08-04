@@ -12,8 +12,11 @@ export const ROLES = {
 };
 
 export const CART_ITEMS = 'cart_items';
-export const CART_TOTAL = 'cart_total';
-export const CART_ID = 'cart_id';
+export const CART_TOTAL = 'CART_TOTAL';
+export const CART_ID = 'CART_ID';
+export const CART_NAME = 'cart_id';
+export const CART_ITEM_STATUS_WENT = 'cart_ITEM_STATUS_WENT';
+export const CART_STATUS = 'cart_STATUS';
 
 export const CART_ITEM_STATUS = {
   Processing: 'Processing',
